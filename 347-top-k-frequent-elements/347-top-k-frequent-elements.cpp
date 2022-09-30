@@ -3,7 +3,7 @@ public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
         if(nums.size()==1) return nums;
         vector<pair<int,int>>freq;
-       map<int,int>m;
+        unordered_map<int,int>m;
         for(int i=0;i<nums.size();i++){
             m[nums[i]]++;
         }
