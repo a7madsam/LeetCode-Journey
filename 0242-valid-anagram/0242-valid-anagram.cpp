@@ -2,9 +2,12 @@ class Solution {
 public:
     bool isAnagram(string s, string t) {
         unordered_map<char,int> freq;
-        if(s.length() != t.length())
+        int slen = s.length();
+        int tlen = t.length();
+
+        if(slen!=tlen)
         return false;
-        for(int i=0;i<s.length();i++){
+        for(int i=0;i<slen;i++){
             freq[s[i]-'a']++;
             freq[t[i]-'a']--;
         }
