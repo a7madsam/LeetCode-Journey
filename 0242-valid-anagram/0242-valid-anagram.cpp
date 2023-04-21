@@ -1,7 +1,7 @@
 class Solution {
-    int freq[26];
 public:
     bool isAnagram(string s, string t) {
+        map<char,int> freq;
         if(s.length() != t.length())
         return false;
         for(int i=0;i<s.length();i++){
