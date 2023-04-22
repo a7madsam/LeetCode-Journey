@@ -3,10 +3,9 @@ public:
     vector<int> twoSum(vector<int>& n, int t) {
         int l=0,r=n.size()-1;
         while(l<r) {
-            int cur = n[l]+n[r];
-            if(cur>t) {
+            if(n[l]+n[r]>t) {
                 r--;
-            } else if(cur<t) {
+            } else if(n[l]+n[r]<t) {
                 l++;
             } else {
                 return {l+1,r+1};
