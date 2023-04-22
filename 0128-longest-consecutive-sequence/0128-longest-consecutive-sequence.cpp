@@ -3,13 +3,9 @@ public:
     int longestConsecutive(vector<int>& nums) {
         ios_base::sync_with_stdio(false);
         cin.tie(NULL);
-        int sz = nums.size();
-        unordered_map<int,bool> m;
-        for(int i=0; i<sz; i++) {
-            m[nums[i]] = true;
-        }
+        unordered_set<int> m(nums.begin(),nums.end());
         int ans= 0;
-        for(int j=0; j<sz; j++) {
+        for(int j=0; j<nums.size(); j++) {
             if(m.find(nums[j]-1) != m.end())
                 continue;
             int len = 0;
